@@ -1,6 +1,7 @@
 {
   "name": "vue-api",
   "version": "0.0.0",
+  "homepage": "https://add11013.github.io/garbage-api",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

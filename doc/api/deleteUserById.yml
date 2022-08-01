@@ -1,0 +1,13 @@
+operationId: deleteUserById
+parameters:
+  - name: userId
+    in: path
+    description: The unique id.
+    required: true
+    schema:
+      type: string
+tags:
+  - User
+responses:
+  "204":
+    description: User

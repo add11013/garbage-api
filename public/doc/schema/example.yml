@@ -1,0 +1,60 @@
+openapi: 3.0.0
+info:
+  version: v0.1.0
+  title: Garbage API
+  description: This is the API for garbage system.
+servers:
+- url: http://localhost:8080
+paths:
+  "/users":
+    get:
+      "$ref": "../api/getUsers.yml"
+
+  "/user/{userId}":
+    get:
+      "$ref": "../api/getUserById.yml"
+    post:
+      "$ref": "../api/postUser.yml"
+    put:
+      "$ref": "../api/putUserById.yml"
+    delete:
+      "$ref": "../api/deleteUserById.yml"
+components:
+  Items:
+  - name: item 01
+    object: parameter
+    description: custom parameter objects should have a description
+    truthy: description
+  - name: item 02
+    object: parameter
+    description: custom parameter objects should have a description
+    truthy: description
+  schemas:
+    UserList:
+      type: array
+      items:
+        "$ref": "#/components/schemas/User"
+    User:
+        type: object
+        properties:
+          id:
+            type: integer
+            format: int64
+          name:
+            description: User name
+            type: string
+          starRating:
+            description:
+              A rating for a user
+            type: object
+            format: starRating
+          lastLoginTimeStamp:
+            example: 1659368303
+            description:
+              Last login time stamp
+            type: string
+          loginBind:
+            description:
+              Login with 3 party, like `Google`, `Line`
+            type: string
+            example: GOOGLE

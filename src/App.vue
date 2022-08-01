@@ -1,11 +1,19 @@
 <script setup>
-import 'openapi-explorer';
+import "openapi-explorer";
+</script>
+
+<script>
+export default {
+  data() {
+    return {
+      url: window.location.origin + "/doc/schema/example.yml",
+    };
+  },
+};
 </script>
 
 <template>
-  <openapi-explorer
-    spec-url = "https://petstore.swagger.io/v2/swagger.json">
-  </openapi-explorer>
+  <openapi-explorer :spec-url="url"></openapi-explorer>
 </template>
 
 <style>

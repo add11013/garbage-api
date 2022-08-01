@@ -1,0 +1,42 @@
+operationId: getUserById
+parameters:
+  - name: userId
+    in: path
+    description: The unique id.
+    required: true
+    schema:
+      type: string
+  - name: newProperty
+    in: query
+    description: The unique id.
+    required: true
+    schema:
+      type: string
+tags:
+  - User
+responses:
+  "200":
+    description: User
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            id:
+              type: integer
+              format: int64
+            name:
+              description: User name
+              type: string
+            starRating:
+              description: A rating for a user
+              type: object
+              format: starRating
+            lastLoginTimeStamp:
+              example: 1659368303
+              description: Last login time stamp
+              type: string
+            loginBind:
+              description: Login with 3 party, like `Google`, `Line`
+              type: string
+              example: GOOGLE

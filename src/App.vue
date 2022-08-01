@@ -6,7 +6,7 @@ import "openapi-explorer";
 export default {
   data() {
     return {
-      url: "/doc/schema/example.yml",
+      url: "./doc/schema/example.yml",
     };
   },
 };

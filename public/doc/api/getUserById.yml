@@ -1,6 +1,6 @@
 operationId: getUserById
 parameters:
-  - name: userId
+  - name: userIdsssss
     in: path
     description: The unique id.
     required: true
